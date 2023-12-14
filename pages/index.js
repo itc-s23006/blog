@@ -7,9 +7,9 @@ const Home = () => {
     <>
       <header />
       <main>
-        <Hero />
+        <hero />
       </main>
-      <Footer />
+      <footer />
     </>
   )
 }
