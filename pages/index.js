@@ -1,17 +1,15 @@
-import Header from '../components/header'
-import Hero from '../components/hero'
-import Footer from '../components/footer'
+import Header from 'components/header'
+import Hero from 'components/hero'
+import Footer from 'components/footer'
 
 const Home = () => {
   return (
     <>
-      <header />
-
+      <Header />
       <main>
-        <hero />
+        <Hero />
       </main>
-
-      <footer />
+      <Footer />
     </>
   )
 }
