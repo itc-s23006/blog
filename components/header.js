@@ -1,3 +1,3 @@
 const Header = () => <header>HEADER</header>
 
-export default Home
+export default Header 
