@@ -6,4 +6,5 @@ const Hero = () => {
     </div>
   )
 }
+
 export default Home
