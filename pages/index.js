@@ -5,11 +5,11 @@ import Footer from '../components/footer'
 const Home = () => {
   return (
     <>
-      <header />
+      <Header />
       <main>
-        <hero />
+        <Hero />
       </main>
-      <footer />
+      <Footer />
     </>
   )
 }
