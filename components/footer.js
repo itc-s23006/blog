@@ -1,3 +1,11 @@
-const Footer = () => <footer>FOOTER</footer>
+import Logo from 'components/logo'
 
-export default Footer 
+const Footer = () => {
+  return (
+    <footer>
+      <Logo />
+    </footer>
+  )
+}
+
+export default Footer
