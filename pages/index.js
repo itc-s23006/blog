@@ -1,16 +1,13 @@
-import Header from 'components/header'
 import Hero from 'components/hero'
-import Footer from 'components/footer'
 
 const Home = () => {
+  const props1 = { title: 'CUBE', subtitle: 'アウトプットしていくサイト' }
+
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-      </main>
-      <Footer />
-    </>
+    <section>
+      <Hero {...props1} />
+      imageOn
+    </section>
   )
 }
 
