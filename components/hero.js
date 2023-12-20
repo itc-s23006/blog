@@ -1,5 +1,4 @@
 import styles from 'styles/hero.module.css'
-
 const Hero = ({ title, subtitle, imageOn = false }) => (
   <>
     <div className={styles.flexContainer}>
@@ -8,6 +7,7 @@ const Hero = ({ title, subtitle, imageOn = false }) => (
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
     </div>
+    {imageOn && <figure> [image] </figure>}
   </>
 )
 
