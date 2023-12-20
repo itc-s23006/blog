@@ -1,13 +1,11 @@
 import Hero from 'components/hero'
-
-const Blog = () => {
-  const props1 = { title: 'Blog', subtitle: 'Recent Posts' }
-
+const props = { title: 'Blog', subtitle: 'Recent Posts' }
+const Home = () => {
   return (
-    <section>
-      <Hero {...props1} />
-    </section>
+    <>
+      <Hero {...props} />
+    </>
   )
 }
 
-export default Blog
+export default Home
