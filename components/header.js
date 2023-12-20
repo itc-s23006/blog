@@ -6,7 +6,7 @@ import Container from 'components/container'
 const Header = () => {
   return (
     <header>
-      <Container largs>
+      <Container large>
         <div className={styles.flexContainer}>
           <Logo boxOn />
           <Nav />
