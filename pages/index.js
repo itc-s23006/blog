@@ -1,13 +1,15 @@
 import Hero from 'components/hero'
 
+const props = {
+  title: 'CUBE',
+  subtitle: 'アウトプットしていくサイト',
+  imageOn: true
+}
 const Home = () => {
-  const props1 = { title: 'CUBE', subtitle: 'アウトプットしていくサイト' }
-
   return (
-    <section>
-      <Hero {...props1} />
-      imageOn
-    </section>
+    <>
+      <Hero {...props} />
+    </>
   )
 }
 
