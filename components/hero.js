@@ -1,7 +1,7 @@
 import styles from 'styles/hero.module.css'
 
-const Hero = ({ title, subtitle, imageOn = false }) => {
-  return (
+const Hero = ({ title, subtitle, imageOn = false }) => (
+  <>
     <div className={styles.flexContainer}>
       <div className={styles.text}>
         <h1 className={styles.title}>{title}</h1>
@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, imageOn = false }) => {
       </div>
       {imageOn && <figure> [image] </figure>}
     </div>
-  )
-}
+  </>
+)
 
 export default Hero
