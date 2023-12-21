@@ -7,9 +7,10 @@ import {
   TwoColumnMain,
   TwoColumnSidebar
 } from 'components/two-column'
+
 const props = { title: 'About', subtitle: 'About development activities' }
-const About = () => {
-  ;<Container>
+const About = () => (
+  <Container>
     <Hero {...props} />
     <TwoColumn>
       <TwoColumnMain>
@@ -46,6 +47,6 @@ const About = () => {
       </TwoColumnSidebar>
     </TwoColumn>
   </Container>
-}
+)
 
 export default About
