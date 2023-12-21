@@ -1,5 +1,5 @@
 import Hero from 'components/hero'
-
+import Container from 'components/container'
 const props = {
   title: 'CUBE',
   subtitle: 'アウトプットしていくサイト',
@@ -8,7 +8,9 @@ const props = {
 const Home = () => {
   return (
     <>
-      <Hero {...props} />
+      <Container>
+        <Hero {...props} />
+      </Container>{' '}
     </>
   )
 }
