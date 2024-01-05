@@ -10,7 +10,12 @@ const Hero = ({ title, subtitle, imageOn = false }) => (
     </div>
     {imageOn && (
       <figure className={styles.image}>
-        <Image src={cube} alt='' layout='responsive' />
+        <Image
+          src={cube}
+          alt=''
+          layout='responsive'
+          sizes='(min-width:1152px) 1152px, 100vw'
+        />
       </figure>
     )}
   </div>
