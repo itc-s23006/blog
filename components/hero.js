@@ -15,6 +15,8 @@ const Hero = ({ title, subtitle, imageOn = false }) => (
           alt=''
           layout='responsive'
           sizes='(min-width:1152px) 1152px, 100vw'
+          priority
+          placeholder='blur'
         />
       </figure>
     )}
