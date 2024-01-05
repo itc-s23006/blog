@@ -1,3 +1,3 @@
 const Footer = () => <footer>FOOTER</footer>
 
-export default Home
+export default Footer
