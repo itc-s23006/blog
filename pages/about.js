@@ -20,6 +20,7 @@ const About = () => (
         alt=''
         layout='responsive'
         sizes='(min-width:1152px) 1152px, 100vw'
+        priority
       />
     </figure>
     <TwoColumn>
