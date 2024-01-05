@@ -4,7 +4,7 @@ import Social from 'components/social'
 const Contact = () => (
   <div className={styles.stack}>
     <h3 className={styles.heading}>Contact</h3>
-    <Social />
+    <Social iconSize='30px' />
     <address>cube@web.mail.address</address>
   </div>
 )
