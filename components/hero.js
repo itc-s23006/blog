@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, imageOn = false }) => (
       <p className={styles.subtitle}>{subtitle}</p>
     </div>
     {imageOn && (
-      <figure>
+      <figure className={styles.image}>
         <Image src={cube} alt='' layout='responsive' />
       </figure>
     )}
