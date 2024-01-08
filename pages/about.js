@@ -9,10 +9,12 @@ import {
 } from 'components/two-column'
 import Image from 'next/legacy/image'
 import eyecatch from 'images/about.jpg'
+import Meta from 'components/meta'
 
 const props = { title: 'About', subtitle: 'About development activities' }
 const About = () => (
   <Container>
+    <Meta pageTitle=' アバウト ' />
     <Hero {...props} />
     <figure>
       <Image
