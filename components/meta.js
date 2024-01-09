@@ -1,9 +1,15 @@
 import Head from 'next/head'
 
-const Meta =( pageTitle ) => (
-<Head>
-<title>{pageTitle}</title>
-<meta property="og:title" content={pageTitle} />
+import { siteMeta } from 'lib/constants'
+const { siteTitle } = siteMeta
+
+const Meta = ({ pageTitle }) => (
+  <Head>
+    <title>
+      {pageTitle} | {siteTitle}
+    </title>
+    <meta property='og:title' content={`${pageTitle} | ${siteTitle}`} />
+  </Head>
 )
 
 export default Meta
