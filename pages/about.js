@@ -14,7 +14,13 @@ import Meta from 'components/meta'
 const props = { title: 'About', subtitle: 'About development activities' }
 const About = () => (
   <Container>
-    <Meta pageTitle='アバウト' pageDesc='About development activities' />
+    <Meta
+      pageTitle='アバウト'
+      pageDesc='About development activities'
+      pageImg={eyecatch.src}
+      pageImgW={eyecatch.width}
+      pageImgH={eyecatch.height}
+    />
     <Hero {...props} />
     <figure>
       <Image
