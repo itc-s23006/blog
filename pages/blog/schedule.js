@@ -4,9 +4,10 @@ const Schedule = () => {
   return <h1>記事のタイトル</h1>
 }
 const getStaticProps = async () => {
-  console.log('処理１')
-  setTimeout(() => console.log('処理２'), 1000)
-  console.log('処理３')
+  const resPromise = client.get({
+    endpoint: 'blogs'
+  })
+  resPromise.then(res => console.log(res)).catch(err => console.log(err))
   return {
     props: {}
   }
