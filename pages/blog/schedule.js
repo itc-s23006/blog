@@ -27,7 +27,9 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
         </figure>
         <TwoColumn>
           <TwoColumnMain>
-            <PostBody>{content}</PostBody>
+            <PostBody>
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+            </PostBody>
           </TwoColumnMain>
           <TwoColumnSidebar></TwoColumnSidebar>
         </TwoColumn>
