@@ -8,6 +8,7 @@ import {
   TwoColumnMain,
   TwoColumnSidebar
 } from 'components/two-column'
+import ConvertBody from 'components/convert-body'
 
 const Schedule = ({ title, publish, content, eyecatch, categories }) => {
   return (
@@ -28,7 +29,7 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
         <TwoColumn>
           <TwoColumnMain>
             <PostBody>
-              <div dangerouslySetInnerHTML={{ __html: content }} />
+              <ConvertBody contentHTML={content} />
             </PostBody>
           </TwoColumnMain>
           <TwoColumnSidebar></TwoColumnSidebar>
