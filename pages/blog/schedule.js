@@ -11,7 +11,6 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
     </Container>
   )
 }
-
 const getStaticProps = async () => {
   const slug = 'schedule'
 
@@ -27,5 +26,6 @@ const getStaticProps = async () => {
     }
   }
 }
+
 export default Schedule
 export { getStaticProps }
