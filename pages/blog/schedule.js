@@ -57,6 +57,8 @@ const Schedule = ({
     </Container>
   )
 }
+export default Schedule
+
 const getStaticProps = async () => {
   const slug = 'schedule'
 
@@ -76,5 +78,4 @@ const getStaticProps = async () => {
   }
 }
 
-export default Schedule
 export { getStaticProps }
