@@ -13,9 +13,23 @@ import PostCategories from 'components/post-categories'
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
 
-const Schedule = ({ title, publish, content, eyecatch, categories }) => {
+const Schedule = ({
+  title,
+  publish,
+  content,
+  eyecatch,
+  categories,
+  description
+}) => {
   return (
     <Container>
+      <Meta
+        pageTitle={title}
+        pageDesc={description}
+        pageImg={eyecatch.url}
+        pageImgW={eyecatch.width}
+        pageImgH={eyecatch.height}
+      />
       <article>
         <PostHeader title={title} subtitle='Blog Article' publish={publish} />
         <figure>
@@ -57,7 +71,7 @@ const getStaticProps = async () => {
       content: post.content,
       eyecatch: post.eyecatch,
       categories: post.categories,
-      description: description
+      description
     }
   }
 }
