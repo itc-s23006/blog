@@ -24,5 +24,5 @@ const getStaticProps = async () => {
     }
   }
 }
-export default 
+export default Schedule
 export { getStaticProps }
