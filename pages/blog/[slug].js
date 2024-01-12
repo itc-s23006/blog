@@ -61,6 +61,14 @@ const Post = ({
     </Container>
   )
 }
+
+const getStaticPaths = async () => {
+  return {
+    paths: ['/blog/schedule', '/blog/music', '/blog/micro'],
+    fallback: false
+  }
+}
+
 const getStaticProps = async () => {
   const slug = 'micro'
 
@@ -87,3 +95,4 @@ const getStaticProps = async () => {
 
 export default Post
 export { getStaticProps }
+export { getStaticPaths }
