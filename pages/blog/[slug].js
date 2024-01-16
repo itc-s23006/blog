@@ -15,6 +15,7 @@ import Meta from 'components/meta'
 import { eyecatchLocal } from 'lib/constants'
 import { getPlaiceholder } from 'plaiceholder'
 import { prevNextPost } from 'lib/prev-next-post'
+import Pagination from 'components/pagination'
 
 const Post = ({
   title,
@@ -60,6 +61,12 @@ const Post = ({
             <PostCategories categories={categories} />
           </TwoColumnSidebar>
         </TwoColumn>
+        <Pagination
+          prevText={prevPost.title}
+          prevUrl={`/blog/${prevPost.slug}`}
+          nextText={nextPost.title}
+          nextUrl={`/blog/${nextPost.slug}`}
+        />
         <div>
           {prevPost.title} {prevPost.slug}
         </div>
