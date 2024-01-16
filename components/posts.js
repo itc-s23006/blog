@@ -16,6 +16,7 @@ const Posts = ({ posts }) => {
                   layout='responsive'
                   width={eyecatch.width}
                   height={eyecatch.height}
+                  sizes='(min-width: 1152px) 576px, 50vw'
                   placeholder='blur'
                   blurDataURL={eyecatch.blurDataURL}
                 />
