@@ -67,12 +67,6 @@ const Post = ({
           nextText={nextPost.title}
           nextUrl={`/blog/${nextPost.slug}`}
         />
-        <div>
-          {prevPost.title} {prevPost.slug}
-        </div>
-        <div>
-          {nextPost.title} {nextPost.slug}
-        </div>
       </article>
     </Container>
   )
