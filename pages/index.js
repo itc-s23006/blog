@@ -7,6 +7,12 @@ import Pagination from 'components/pagination'
 import { getPlaiceholder } from 'plaiceholder'
 import { eyecatchLocal } from 'lib/constants'
 
+const props = {
+  title: 'CUBE',
+  subtitle: 'アウトプットしていくサイト',
+  imageOn: true
+}
+
 const Home = ({ posts }) => {
   return (
     <>
