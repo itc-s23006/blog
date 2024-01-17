@@ -33,7 +33,7 @@ const getStaticProps = async context => {
   const posts = await getAllPostsByCategory(cat.id)
 
   for (const post of posts) {
-    if (!post.hasOwnProperty.call('eyecatch')) {
+    if (!post.hasOwnProperty('eyecatch')) {
       post.eyecatch = eyecatchLocal
     }
     const { base64 } = await getPlaiceholder(post.eyecatch.url)
@@ -42,7 +42,8 @@ const getStaticProps = async context => {
 
   return {
     props: {
-      name: cat.name
+      name: cat.name,
+      posts
     }
   }
 }
