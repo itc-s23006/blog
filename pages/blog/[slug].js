@@ -73,8 +73,6 @@ const Post = ({
   )
 }
 
-export default Post
-
 const getStaticPaths = async () => {
   const allSlugs = await getAllSlugs()
 
@@ -113,5 +111,6 @@ const getStaticProps = async context => {
   }
 }
 
+export default Post
 export { getStaticProps }
 export { getStaticPaths }
