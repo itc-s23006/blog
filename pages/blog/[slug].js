@@ -73,8 +73,6 @@ const Post = ({
   )
 }
 
-export default Post
-
 const getStaticProps = async () => {
   const slug = 'schedule'
 
@@ -86,8 +84,6 @@ const getStaticPaths = async () => {
     fallback: false
   }
 }
-
-export { getStaticPaths }
 
 const getStaticProps = async context => {
   const slug = context.params.slug
@@ -118,4 +114,6 @@ const getStaticProps = async context => {
   }
 }
 
+export default Post
 export { getStaticProps }
+export { getStaticPaths }
