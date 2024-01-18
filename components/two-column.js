@@ -1,7 +1,7 @@
 import styles from 'styles/two-column.module.css'
 
 const TwoColumn = ({ children }) => (
-  <div class={styles.flexContainer}>{children}</div>
+  <div className={styles.flexContainer}>{children}</div>
 )
 
 const TwoColumnMain = ({ children }) => (
