@@ -1,36 +1,27 @@
-import { useEffect, useState } from 'react'
+import Link from 'next/link'
+const getStaticProps = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const data = await res.json()
 
-const UsersPage = () => {
-  const [users, setUsers] = useState([])
+  return {
+    props: { users: data }
+  }
+}
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch(
-          'https://jsonplaceholder.typicode.com/users'
-        )
-        const usersData = await response.json()
-        setUsers(usersData)
-      } catch (error) {
-        console.error('Error fetching users:', error)
-      }
-    }
-
-    fetchUsers()
-  }, [])
-
+const Users = ({ users }) => {
   return (
     <div>
-      <h1>User List</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>
-            <a href={`/users/${user.id}`}>{user.name}</a>
-          </li>
-        ))}
-      </ul>
+      <h1>All Users</h1>
+      {users.map(user => (
+        <Link legacyBehavior href={`/users/${user.id}`} key={user.id}>
+          <a>
+            <h3>{user.name}</h3>
+          </a>
+        </Link>
+      ))}
     </div>
   )
 }
 
-export default UsersPage
+export default Users
+export { getStaticProps }
