@@ -1,52 +1,43 @@
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
+import React from 'react'
+const getStaticPaths = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/')
+  const data = await res.json()
 
-const UserPage = () => {
-  const router = useRouter()
-  const { id } = router.query
-  const [user, setUser] = useState(null)
-  const [todos, setTodos] = useState([])
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const userResponse = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`
-        )
-        const userData = await userResponse.json()
-        setUser(userData)
-
-        const todosResponse = await fetch(
-          `https://jsonplaceholder.typicode.com/todos?userId=${id}`
-        )
-        const todosData = await todosResponse.json()
-        setTodos(todosData)
-      } catch (error) {
-        console.error('Error fetching user details:', error)
-      }
+  const paths = data.map(user => {
+    return {
+      params: { id: user.id.toString() }
     }
+  })
 
-    if (id) {
-      fetchUser()
-    }
-  }, [id])
+  return {
+    paths,
+    fallback: false
+  }
+}
 
+const getStaticProps = async context => {
+  const id = context.params.id
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
+  const data = await res.json()
+
+  return {
+    props: { user: data }
+  }
+}
+
+const Details = ({ user }) => {
   return (
     <div>
-      {user && (
-        <div>
-          <h1>{user.name}'s ToDo List</h1>
-          <ul>
-            {todos.map(todo => (
-              <li key={todo.id}>
-                {todo.title} - {todo.completed ? 'Completed' : 'Not Completed'}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <h1>{user.name}</h1>
+      <p>{user.id}</p>
+      <p>{user.email}</p>
+      <p>{user.website}</p>
+      <p>{user.city}</p>
+      <p>{user.username}</p>
     </div>
   )
 }
 
-export default UserPage
+export default Details
+export { getStaticPaths }
+export { getStaticProps }
